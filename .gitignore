@@ -1,1 +1,4 @@
+#build
 /build/
+#dart tools
+/.dart_tool/
