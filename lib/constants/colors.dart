@@ -4,8 +4,8 @@ class AppColors {
 
   static ColorScheme colorScheme = const ColorScheme(
     brightness: Brightness.light,
-    primary: Color(0xFFF48C04),
-    onPrimary: Color(0xFFF48C04),
+    primary: Color.fromARGB(255, 8, 201, 40),
+    onPrimary: Color.fromARGB(255, 8, 201, 40),
     secondary: Colors.white,
     onSecondary: Colors.white,
     error: Colors.red,
