@@ -23,7 +23,7 @@ class Login extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SvgPicture.asset('assets/illustrations/sign_in.svg', height: ScreenDimensions.getScreenHeight(context) * 0.15,),
+                  SvgPicture.asset('assets/illustrations/muj.svg', height: ScreenDimensions.getScreenHeight(context) * 0.15,),
           
                   const SizedBox(height: 16,),
           
@@ -58,7 +58,7 @@ class Login extends StatelessWidget {
           
                     GestureDetector(
                       onTap: () { Navigator.push(context, (MaterialPageRoute(builder: (context) => const Register()))); },
-                      child: Text("Sign Up Here", style: AppTextTheme.lightTextTheme.bodyMedium!.copyWith(color: AppColors.colorScheme.primary, fontWeight: FontWeight.w500), ))
+                      child: Text("Sign Up Here", style: AppTextTheme.lightTextTheme.bodyMedium!.copyWith(color: AppColors.colorScheme.primary, fontWeight: FontWeight.w500,decoration: TextDecoration.underline), ))
           
                   ],)
           

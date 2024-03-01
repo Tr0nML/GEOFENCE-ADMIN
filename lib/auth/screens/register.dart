@@ -24,7 +24,7 @@ class Register extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SvgPicture.asset('assets/illustrations/register.svg', height: ScreenDimensions.getScreenHeight(context) * 0.15,),
+                  SvgPicture.asset('assets/illustrations/muj.svg', height: ScreenDimensions.getScreenHeight(context) * 0.15,),
           
                   const SizedBox(height: 16,),
           
@@ -48,9 +48,21 @@ class Register extends StatelessWidget {
           
                   SizedBox(height: ScreenDimensions.getScreenHeight(context) * 0.1,),
           
-                  Center(child: CustomButton(title: "Sign Up", borderColor: Colors.black, containerColor: AppColors.colorScheme.primary, outerContainerColor: AppColors.colorScheme.secondary, textColor: AppColors.colorScheme.secondary, onTap: () { 
-                    Navigator.push(context, (MaterialPageRoute(builder: (context) => const HomePage())));
-                  },)),
+                  Center(
+                    child: CustomButton(
+                      title: "Sign Up",
+                      borderColor: Colors.black, 
+                      containerColor: AppColors.colorScheme.primary, 
+                      outerContainerColor: AppColors.colorScheme.secondary, 
+                      textColor: AppColors.colorScheme.secondary, 
+                      onTap: () { 
+                        Navigator.push(
+                          context, 
+                          (MaterialPageRoute(
+                            builder: (context) => const HomePage())));
+                      }
+
+                  ,)),
           
           
                   SizedBox(height: ScreenDimensions.getScreenHeight(context) * 0.1,),
@@ -65,7 +77,7 @@ class Register extends StatelessWidget {
           
                     GestureDetector(
                       onTap: () { Navigator.push(context, (MaterialPageRoute(builder: (context) => const Login()))); },
-                      child: Text("Login Here", style: AppTextTheme.lightTextTheme.bodyMedium!.copyWith(color: AppColors.colorScheme.primary, fontWeight: FontWeight.w500), ))
+                      child: Text("Login Here", style: AppTextTheme.lightTextTheme.bodyMedium!.copyWith(color: AppColors.colorScheme.primary, fontWeight: FontWeight.w500,decoration: TextDecoration.underline), ))
           
                   ],)
           
