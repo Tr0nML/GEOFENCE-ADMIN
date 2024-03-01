@@ -44,6 +44,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "checked_yaml",
+      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/cli_util-0.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -110,10 +122,10 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_lints",
-      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/flutter_lints-3.0.1",
+      "name": "flutter_launcher_icons",
+      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.18"
     },
     {
       "name": "flutter_native_splash",
@@ -194,6 +206,12 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0",
       "packageUri": "lib/",
@@ -210,12 +228,6 @@
       "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/leak_tracker_testing-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-    },
-    {
-      "name": "lints",
-      "rootUri": "file:///Users/mac18/.pub-cache/hosted/pub.dev/lints-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
     },
     {
       "name": "lottie",
@@ -446,7 +458,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-01T13:08:52.896242Z",
+  "generated": "2024-03-01T15:02:08.443803Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }
