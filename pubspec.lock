@@ -256,6 +256,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  jiffy:
+    dependency: transitive
+    description:
+      name: jiffy
+      sha256: b09b6aacc0ebe7d178d2fcbabfd73e7d3340594043fe949bb7e0814093b00201
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.0"
   js:
     dependency: transitive
     description:
@@ -296,6 +304,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  line_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: line_awesome_flutter
+      sha256: "7e1beb342895d7da40d40047d193f8ecfd494355b399dc3d92912c31ccc4d808"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   lottie:
     dependency: transitive
     description:
@@ -469,14 +485,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: "9fae07d8d1f1f66c61ad40cce8f85c02b8a3506ff0c3eae8ace0fd1d504b1ea5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "25.1.38"
+  syncfusion_flutter_xlsio:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_xlsio
+      sha256: e83e101bf62a9a4aa6902aacd7dda01ea8fa52f4ff1caf46db8d774614f29708
+      url: "https://pub.dev"
+    source: hosted
+    version: "25.1.38"
+  syncfusion_officecore:
+    dependency: transitive
+    description:
+      name: syncfusion_officecore
+      sha256: "8e01f25fe7e29ca592428e0c610deff63ed9a029b4feb29e032d4ab901aa9275"
+      url: "https://pub.dev"
+    source: hosted
+    version: "25.1.38"
   table_calendar:
     dependency: "direct main"
     description:
       name: table_calendar
-      sha256: "3f7950145168251aad4fa6c0a914b5ef4e9a82fa365bb349c3ac5378f866e771"
+      sha256: b759eb6caa88dda8e51c70ee43c19d1682f8244458f84cced9138ee35b2ce416
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
+    version: "3.1.1"
   term_glyph:
     dependency: transitive
     description:

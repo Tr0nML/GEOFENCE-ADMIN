@@ -3,6 +3,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:geofence_attendance_system/auth/screens/register.dart';
 import 'package:geofence_attendance_system/constants/colors.dart';
+import 'package:geofence_attendance_system/screens/homepage.dart';
 import '../../common/custom_button.dart';
 import '../../common/custom_text_box.dart';
 import '../../constants/dimensions.dart';
@@ -43,7 +44,19 @@ class Login extends StatelessWidget {
           
                   SizedBox(height: ScreenDimensions.getScreenHeight(context) * 0.175,),
           
-                  Center(child: CustomButton(title: "Log In", borderColor: Colors.black, containerColor: AppColors.colorScheme.primary, outerContainerColor: AppColors.colorScheme.secondary, textColor: AppColors.colorScheme.secondary, onTap: () => {})),
+                  Center(
+                    child: CustomButton(
+                      title: "Log In", 
+                      borderColor: Colors.black, 
+                      containerColor: AppColors.colorScheme.primary, 
+                      outerContainerColor: AppColors.colorScheme.secondary, 
+                      textColor: AppColors.colorScheme.secondary, 
+                      onTap: ()  { 
+                        Navigator.push(
+                          context, 
+                          (MaterialPageRoute(
+                            builder: (context) => const HomePage())));
+                      },)),
           
           
                   SizedBox(height: ScreenDimensions.getScreenHeight(context) * 0.1,),
