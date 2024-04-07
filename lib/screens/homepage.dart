@@ -10,6 +10,7 @@ import 'package:geofence_attendance_system/constants/colors.dart';
 import 'package:geofence_attendance_system/constants/dimensions.dart';
 // import 'package:geofence_attendance_system/screens/attendace_record.dart';
 import 'package:geofence_attendance_system/screens/profile_screen.dart';
+import 'package:geofence_attendance_system/screens/show_data.dart';
 import 'package:geofence_attendance_system/themes/text_theme.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -413,7 +414,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           onTap: () {
                             setState(() {
-                              
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const ShowData()));
                             });
                           },
                         ),
@@ -572,49 +573,5 @@ class _HomePageState extends State<HomePage> {
   //     ),
   //   );
   // }
-  Future<void> exportDataToExcel(List<Map<String, dynamic>> data) async {
-    final excel.Workbook workbook = excel.Workbook();
-    final excel.Worksheet sheet = workbook.worksheets[0];
-
-    sheet.getRangeByIndex(1, 1).setText("Duartion");
-    sheet.getRangeByIndex(1, 2).setText("Entry Time");
-    sheet.getRangeByIndex(1, 3).setText("Exit Time");
-    sheet.getRangeByIndex(1, 4).setText("Name");
-    sheet.getRangeByIndex(1, 5).setText("Office Name");
-
-    int i = 0;
-    for (final item in data) {
-      print("Data not found");
-      sheet.getRangeByIndex(i + 2, 1).setText(item['Duration']);
-      sheet.getRangeByIndex(i + 2, 2).setText(item['Entry']);
-      sheet.getRangeByIndex(i + 2, 3).setText(item['Exit']);
-      sheet.getRangeByIndex(i + 2, 4).setText(item['Name']);
-      sheet.getRangeByIndex(i + 2, 5).setText(item['Classroom']);
-      i++;
-    }
-
-    final List<int> bytes = workbook.saveAsStream();
-    final directory = await getExternalStorageDirectory();
-    final filePath = await getDownloadPath();
-    print(filePath);
-    File('${filePath.toString()}/Attendance${chosenOffice}.xlsx').writeAsBytes(bytes);
-    print("File downloaded");
-  }
-
-  Future<String?> getDownloadPath() async {
-    Directory? directory;
-    try {
-      if (Platform.isIOS) {
-        directory = await getApplicationDocumentsDirectory();
-      } else {
-        directory = Directory('/storage/emulated/0/Download');
-        if (!await directory.exists()) {
-          directory = await getExternalStorageDirectory();
-        }
-      }
-    } catch (err) {
-      print("Error path not found");
-    }
-    return directory?.path;
-  }
+  
 }
