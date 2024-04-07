@@ -1,7 +1,8 @@
 // import 'package:animated_emoji/animated_emoji.dart';
 // import 'package:flutter/cupertino.dart';
-import 'dart:io';
+// import 'dart:io';
 
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 // import 'package:geofence_attendance_system/common/main_category_accordian.dart';
@@ -14,8 +15,10 @@ import 'package:geofence_attendance_system/screens/show_data.dart';
 import 'package:geofence_attendance_system/themes/text_theme.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:syncfusion_flutter_xlsio/xlsio.dart' as excel;
-import 'package:path_provider/path_provider.dart';
+// import 'package:syncfusion_flutter_xlsio/xlsio.dart' as excel;
+// import 'package:path_provider/path_provider.dart';
+// import 'package:intl/intl.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -30,16 +33,21 @@ class _HomePageState extends State<HomePage> {
   TextEditingController controller=new TextEditingController();
 
   DateTime today=DateTime.now();
+  String showdate="Select a date";
+
   void _onDaySelected(DateTime day,DateTime focusedDay)
   {
     setState(() {
       today=day;
+      String date = today.toString();
+      showdate=date.substring(0,10);
     });
   }
+  bool isEmpty=true;
 
   var fromval = "Entry time";
   var toval = "Exit time";
-  var offices = ["Choose an Office","AB1 236"];
+  var offices = ["Choose an Office","Sharda Pai"];
   var chosenOffice = "Choose an Office";
 
   String date1="";
@@ -106,6 +114,7 @@ class _HomePageState extends State<HomePage> {
     "23:00",
   ];
 
+  // String path1="/attendance record/Manipal University Jaipur/Academic Block 2/2024-04-04/Sharda Pai Auditorium";
 
   @override
   Widget build(BuildContext context) {
@@ -375,7 +384,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(2.0),
                                   child: Text(
-                                    "Date : xx",
+                                    "Date : ${showdate}",
                                     style: AppTextTheme.lightTextTheme.headlineSmall,
                                   ),
                                 ),
@@ -396,7 +405,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: const EdgeInsets.all(2.0),
                                   child: Text(
-                                    "Total present : xx",
+                                    "",
                                     style: AppTextTheme.lightTextTheme.headlineSmall,
                                   ),
                                 ),
@@ -414,6 +423,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           onTap: () {
                             setState(() {
+
                               Navigator.push(context, MaterialPageRoute(builder: (context) => const ShowData()));
                             });
                           },
@@ -573,5 +583,7 @@ class _HomePageState extends State<HomePage> {
   //     ),
   //   );
   // }
-  
+
+   
+
 }
